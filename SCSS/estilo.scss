@@ -3,12 +3,35 @@
 	padding: 0;
 }
 
+@mixin titulos($seccion) {
+	@if $seccion == "home" {
+		color: rgb(68, 66, 66);
+		font-family: "Georama", sans-serif;
+		font-size: 50px;
+		margin-top: 5%;
+	}
+	@if $seccion == "contacto" {
+		color: rgb(68, 66, 66);
+		font-family: "Georama", sans-serif;
+		font-size: 50px;
+		margin-top: 5%;
+	}
+	@if $seccion == "productos" {
+		color: rgb(68, 66, 66);
+		text-align: center;
+	}
+	@if $seccion == "nosotros" {
+		color: rgb(68, 66, 66);
+		font-family: "Georama", sans-serif;
+		font-size: 50px;
+		margin-top: 5%;
+	}
+}
 /*Layout*/
 
 .layout {
 	display: grid;
 	grid-template-columns: 100%;
-
 	grid-template-areas: "header" "main" "footer";
 	height: 100vh;
 }
@@ -28,46 +51,64 @@ main {
 	grid-area: main;
 	background-image: linear-gradient(to top, #68b79c, rgb(243, 255, 245));
 }
-
 .home {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+
+	&__textoPrincipal {
+		margin-left: 10%;
+	}
+	&__contenido {
+		font-family: "Georama", sans-serif;
+		margin-top: 5px;
+	}
+	&__titulosParrafos {
+		@include titulos("home");
+	}
 }
 aside {
 	width: 50%;
 }
-.home__textoPrincipal {
-	margin-left: 10%;
-}
-.home__contenido {
-	font-family: "Georama", sans-serif;
-	margin-top: 5px;
-}
-.home__titulosParrafos {
-	color: grey;
-	font-family: "Georama", sans-serif;
-	font-size: 50px;
-	margin-top: 5%;
-}
-.carro {
+#carro {
 	width: 50%;
+}
+.carousel.slide,
+.carousel-inner {
+	height: 98%;
 }
 .d-block {
 	margin: 20px auto;
+	border-radius: 10px;
 }
-.contenedor__fotoNosotros {
-	width: 50%;
+/*Nosotros*/
+.nosotros {
 	display: flex;
 	flex-direction: row;
-	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
+	&__textoPrincipal {
+		margin-left: 10%;
+	}
+	&__titulosParrafos {
+		@include titulos("nosotros");
+	}
+	&__contenido {
+		font-family: "Georama", sans-serif;
+		margin-top: 5px;
+	}
+	&__contenedorFotoNosotros {
+		width: 50%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		&__foto {
+			width: 80%;
+			height: 80%;
+			border-radius: 20px;
+		}
+	}
 }
-.contenedor__fotoNosotros__foto {
-	width: 80%;
-	height: 80%;
-}
-
 /*footer*/
 footer {
 	grid-area: footer;
@@ -90,14 +131,27 @@ footer {
 }
 
 /*Contacto*/
-#contenedorFormulario {
+.contacto {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	font-family: "Georama", sans-serif;
-	text-align: center;
+	justify-content: space-between;
+	&__titulosParrafos {
+		@include titulos("contacto");
+	}
+	&__contenedorTitulo {
+		width: 50%;
+		margin-left: 5%;
+	}
+	&__contenedorFormulario {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		width: 50%;
+		font-family: "Georama", sans-serif;
+		text-align: center;
+		margin: 5% auto;
+	}
 }
 
 /*Galeria*/
@@ -106,40 +160,45 @@ footer {
 	grid-template-columns: 50% 50%;
 	grid-template-rows: 100%;
 	grid-template-areas: "video fotos";
-}
-.galeria__contenedorVideo {
-	grid-area: video;
-	width: 100%;
-	display: grid;
-	grid-template-columns: 100%;
-	justify-items: center;
-	align-items: center;
-}
-.galeria__contenedorVideo__video {
-	width: 80%;
-	height: 80%;
-}
-.galeria__contenedorGaleria {
-	grid-area: fotos;
-	display: grid;
-	grid-template-columns: 33% 33% 33%;
-	grid-template-rows: 50% 50%;
-	grid-template-areas:
-		"fotoUno fotoDos fotoTres"
-		"fotoCuatro fotoCinco fotoSeis";
-	justify-items: center;
-	align-items: center;
-}
-.galeria__contenedorGaleria__Fotos {
-	width: 180px;
-	height: 180px;
-}
-.galeria__contenedorGaleria__Fotos:hover {
-	transform: scale(2);
+
+	&__contenedorVideo {
+		grid-area: video;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 100%;
+		justify-items: center;
+		align-items: center;
+
+		&__video {
+			width: 80%;
+			height: 80%;
+		}
+	}
+	&__contenedorGaleria {
+		grid-area: fotos;
+		display: grid;
+		grid-template-columns: 33% 33% 33%;
+		grid-template-rows: 50% 50%;
+		grid-template-areas:
+			"fotoUno fotoDos fotoTres"
+			"fotoCuatro fotoCinco fotoSeis";
+		justify-items: center;
+		align-items: center;
+		&__Fotos {
+			width: 180px;
+			height: 180px;
+		}
+		&__Fotos:hover {
+			transform: scale(2);
+		}
+	}
 }
 
 /*Productos*/
 
+.footer__productos {
+	height: 124.8px;
+}
 .productosQuery {
 	grid-area: main;
 	display: flex;
@@ -152,7 +211,7 @@ footer {
 }
 
 #tituloProductos {
-	text-align: center;
+	@include titulos("productos");
 }
 
 /*Media Querys*/
@@ -163,11 +222,12 @@ footer {
 	}
 	.home {
 		flex-direction: column;
+		height: max-content;
 	}
 	aside {
 		width: 100%;
 	}
-	.carro {
+	#carro {
 		width: 100%;
 	}
 	.layout {
@@ -177,36 +237,58 @@ footer {
 		grid-template-columns: 100%;
 		grid-template-rows: 50% 50%;
 		grid-template-areas: "video" "fotos";
+
+		&__contenedorGaleria__Fotos {
+			width: 130px;
+			height: 130px;
+		}
 	}
+
 	.productosQuery {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 	}
-	.galeria__contenedorGaleria__Fotos {
-		width: 130px;
-		height: 130px;
+	#subtituloProductos {
+		text-align: center;
 	}
-	.contenedor__fotoNosotros {
+	.nosotros {
+		display: block;
+	}
+	.nosotros__contenedorFotoNosotros {
 		display: block;
 		margin: auto;
 		width: 75%;
+		&__foto {
+			width: 100%;
+		}
 	}
-	.contenedor__fotoNosotros__foto {
-		width: 100%;
-	}
+
 	.header__productos {
 		height: auto;
 	}
+	.contacto {
+		display: block;
+
+		&__contenedorTitulo {
+			width: 100%;
+			text-align: center;
+		}
+		&__contenedorFormulario {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			font-family: "Georama", sans-serif;
+			text-align: center;
+		}
+	}
 }
 
-/* Incremento a partir de 600px Tablet chica*/
+/* Incremento a partir de 620px Tablet chica*/
 
 @media only screen and (min-width: 620px) {
-	.galeria__contenedorGaleria__Fotos {
-		width: 130px;
-		height: 130px;
-	}
 	.galeria__contenedorGaleria {
 		display: grid;
 		grid-template-columns: 50% 50%;
@@ -217,11 +299,49 @@ footer {
 			"fotoCinco fotoSeis";
 		justify-items: center;
 		align-items: center;
+
+		&__Fotos {
+			width: 130px;
+			height: 130px;
+		}
 	}
 	.productosQuery {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+	}
+	#subtituloProductos {
+		text-align: center;
+	}
+	aside {
+		width: 50%;
+	}
+	.nosotros {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		&__textoPrincipal {
+			margin-left: 10%;
+		}
+		&__titulosParrafos {
+			@include titulos("nosotros");
+		}
+		&__contenido {
+			font-family: "Georama", sans-serif;
+			margin-top: 5px;
+		}
+		&__contenedorFotoNosotros {
+			width: 50%;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			&__foto {
+				width: 80%;
+				height: 80%;
+				border-radius: 20px;
+			}
+		}
 	}
 }
 
@@ -238,9 +358,10 @@ footer {
 			"fotoCuatro fotoCinco fotoSeis";
 		justify-items: center;
 		align-items: center;
-	}
-	.galeria__contenedorGaleria__Fotos {
-		width: 170px;
-		height: 170px;
+
+		&__Fotos {
+			width: 170px;
+			height: 170px;
+		}
 	}
 }
