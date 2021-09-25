@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,400;1,500&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="../CSS/estilo.css" />
+		<title>LadoBcerámica</title>
+	</head>
+	<body>
+		<div class="layout">
+			<header>
+				<nav class="navbar navbar-expand-md navbar-light">
+					<div class="container-fluid">
+						<div class="container logo">
+							<a class="navbar-brand" href="../index.html">
+								<img
+									src="../assets/img/logoLadoB.JPG"
+									alt="logo lado B Ceramica"
+									width="100"
+									height="100"
+								/>
+							</a>
+						</div>
+						<button
+							class="navbar-toggler"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#navbarSupportedContent"
+							aria-controls="navbarSupportedContent"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+						>
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+								<li class="nav-item">
+									<a
+										class="nav-link active"
+										aria-current="page"
+										href="../index.html"
+										>Home</a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="galeria.html">Galería</a>
+								</li>
+
+								<li class="nav-item">
+									<a class="nav-link" href="productos.html">Productos</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="contacto.html">Contactanos</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="nosotros.html">Nosotros</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</header>
+			<main class="home">
+				<div id="contenedorFormulario">
+					<form action="">
+						<div class="mb-3">
+							<label for="exampleFormControlTextarea1" class="form-label"
+								>Dejanos tu comentario</label
+							>
+							<textarea
+								class="form-control"
+								id="exampleFormControlTextarea1"
+								rows="3"
+								placeholder="Compartinos lo que más gustes..."
+							></textarea>
+						</div>
+						<div class="mb-3">
+							<label for="exampleFormControlInput1" class="form-label"
+								>Comparti tu email</label
+							>
+							<input
+								type="email"
+								class="form-control"
+								id="exampleFormControlInput1"
+								placeholder="name@example.com"
+							/>
+						</div>
+						<div>
+							<p>Elige como prefieres que te contactemos?</p>
+							<select
+								class="form-select form-select-sm"
+								aria-label=".form-select-sm example"
+								name=""
+								id=""
+							>
+								<option value="email">Email</option>
+								<option value="whatsapp">WhatsApp</option>
+								<option value="telefono">Llamado</option>
+							</select>
+						</div>
+
+						<div class="form-check">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								value=""
+								id="flexCheckDefault"
+							/>
+							<label class="form-check-label" for="flexCheckDefault">
+								¿Querés recibir informacion con nuestros nuevos productos?
+							</label>
+						</div>
+						<input
+							class="btn btn-warning"
+							type="reset"
+							name=""
+							value="Empieza otra vez"
+							id=""
+						/>
+						<input
+							class="btn btn-success"
+							type="submit"
+							name=""
+							id=""
+							value="Enviar"
+						/>
+					</form>
+				</div>
+			</main>
+			<footer>
+				<a
+					rel="stylesheet"
+					href="mailto:ladobceramica123456@gmail.com"
+					target="blank"
+					><img
+						src="../assets/png/009-google-plus.png"
+						class="footer_iconos"
+						alt="emailLogo"
+				/></a>
+				<a rel="stylesheet" href="https://www.instagram.com" target="blank"
+					><img
+						src="../assets/png/008-instagram.png"
+						class="footer_iconos"
+						alt="instaLogo"
+				/></a>
+				<a rel="stylesheet" href="https://www.facebook.com/" target="blank"
+					><img
+						src="../assets/png/003-facebook.png"
+						class="footer_iconos"
+						alt="faceLogo"
+				/></a>
+				<a rel="stylesheet" href="https://ar.pinterest.com/" target="blank"
+					><img
+						src="../assets/png/pinterest.png"
+						class="footer_iconos"
+						alt="pinteLogo"
+				/></a>
+				<a rel="stylesheet" href="https://whatsapp.com" target="blank"
+					><img
+						src="../assets/png/002-whatsapp.png"
+						class="footer_iconos"
+						alt="whatsapp"
+				/></a>
+			</footer>
+		</div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

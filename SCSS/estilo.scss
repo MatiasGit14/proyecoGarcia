@@ -1,0 +1,246 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*Layout*/
+
+.layout {
+	display: grid;
+	grid-template-columns: 100%;
+
+	grid-template-areas: "header" "main" "footer";
+	height: 100vh;
+}
+/*Encabezado*/
+.navbar {
+	grid-area: header;
+	font-family: "Georama", sans-serif;
+	font-style: italic;
+	width: 100%;
+	height: 100%;
+	color: hsl(161, 73%, 6%);
+	background-color: white;
+}
+
+/*Contenido*/
+main {
+	grid-area: main;
+	background-image: linear-gradient(to top, #68b79c, rgb(243, 255, 245));
+}
+
+.home {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+aside {
+	width: 50%;
+}
+.home__textoPrincipal {
+	margin-left: 10%;
+}
+.home__contenido {
+	font-family: "Georama", sans-serif;
+	margin-top: 5px;
+}
+.home__titulosParrafos {
+	color: grey;
+	font-family: "Georama", sans-serif;
+	font-size: 50px;
+	margin-top: 5%;
+}
+.carro {
+	width: 50%;
+}
+.d-block {
+	margin: 20px auto;
+}
+.contenedor__fotoNosotros {
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.contenedor__fotoNosotros__foto {
+	width: 80%;
+	height: 80%;
+}
+
+/*footer*/
+footer {
+	grid-area: footer;
+	background-color: #041a13;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+/*Comun a todas las paginas*/
+.footer_iconos {
+	height: 32px;
+	width: 32px;
+	margin: 15px;
+}
+.ruteo {
+	text-decoration: none;
+	color: #041a13;
+}
+
+/*Contacto*/
+#contenedorFormulario {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	font-family: "Georama", sans-serif;
+	text-align: center;
+}
+
+/*Galeria*/
+.galeria {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 100%;
+	grid-template-areas: "video fotos";
+}
+.galeria__contenedorVideo {
+	grid-area: video;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 100%;
+	justify-items: center;
+	align-items: center;
+}
+.galeria__contenedorVideo__video {
+	width: 80%;
+	height: 80%;
+}
+.galeria__contenedorGaleria {
+	grid-area: fotos;
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	grid-template-rows: 50% 50%;
+	grid-template-areas:
+		"fotoUno fotoDos fotoTres"
+		"fotoCuatro fotoCinco fotoSeis";
+	justify-items: center;
+	align-items: center;
+}
+.galeria__contenedorGaleria__Fotos {
+	width: 180px;
+	height: 180px;
+}
+.galeria__contenedorGaleria__Fotos:hover {
+	transform: scale(2);
+}
+
+/*Productos*/
+
+.productosQuery {
+	grid-area: main;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: max-content;
+}
+.tablaCaracteristicas {
+	list-style-type: none;
+}
+
+#tituloProductos {
+	text-align: center;
+}
+
+/*Media Querys*/
+
+@media only screen and (max-width: 620px) {
+	.logo {
+		width: auto;
+	}
+	.home {
+		flex-direction: column;
+	}
+	aside {
+		width: 100%;
+	}
+	.carro {
+		width: 100%;
+	}
+	.layout {
+		grid-template-rows: auto;
+	}
+	.galeria {
+		grid-template-columns: 100%;
+		grid-template-rows: 50% 50%;
+		grid-template-areas: "video" "fotos";
+	}
+	.productosQuery {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.galeria__contenedorGaleria__Fotos {
+		width: 130px;
+		height: 130px;
+	}
+	.contenedor__fotoNosotros {
+		display: block;
+		margin: auto;
+		width: 75%;
+	}
+	.contenedor__fotoNosotros__foto {
+		width: 100%;
+	}
+	.header__productos {
+		height: auto;
+	}
+}
+
+/* Incremento a partir de 600px Tablet chica*/
+
+@media only screen and (min-width: 620px) {
+	.galeria__contenedorGaleria__Fotos {
+		width: 130px;
+		height: 130px;
+	}
+	.galeria__contenedorGaleria {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 33% 33% 33%;
+		grid-template-areas:
+			"fotoUno fotoDos"
+			"fotoTres fotoCuatro"
+			"fotoCinco fotoSeis";
+		justify-items: center;
+		align-items: center;
+	}
+	.productosQuery {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}
+
+/*A partir de 768 px Tablet Grande*/
+
+@media only screen and (min-width: 768px) {
+	.galeria__contenedorGaleria {
+		grid-area: fotos;
+		display: grid;
+		grid-template-columns: 33% 33% 33%;
+		grid-template-rows: 50% 50%;
+		grid-template-areas:
+			"fotoUno fotoDos fotoTres"
+			"fotoCuatro fotoCinco fotoSeis";
+		justify-items: center;
+		align-items: center;
+	}
+	.galeria__contenedorGaleria__Fotos {
+		width: 170px;
+		height: 170px;
+	}
+}
