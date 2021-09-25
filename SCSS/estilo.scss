@@ -26,6 +26,11 @@
 		font-size: 50px;
 		margin-top: 5%;
 	}
+	@if $seccion == "galeria" {
+		color: rgb(68, 66, 66);
+		font-family: "Georama", sans-serif;
+		font-size: 50px;
+	}
 }
 /*Layout*/
 
@@ -158,9 +163,15 @@ footer {
 .galeria {
 	display: grid;
 	grid-template-columns: 50% 50%;
-	grid-template-rows: 100%;
-	grid-template-areas: "video fotos";
+	grid-template-rows: 30% 70%;
+	grid-template-areas: "titulo titulo" "video fotos";
 
+	&__contenedorTitulo {
+		grid-area: titulo;
+		@include titulos(galeria);
+		width: 100%;
+		margin: 2% 5%;
+	}
 	&__contenedorVideo {
 		grid-area: video;
 		width: 100%;
@@ -235,12 +246,16 @@ footer {
 	}
 	.galeria {
 		grid-template-columns: 100%;
-		grid-template-rows: 50% 50%;
-		grid-template-areas: "video" "fotos";
+		grid-template-rows: 20% 40% 40%;
+		grid-template-areas: "titulo" "video" "fotos";
 
 		&__contenedorGaleria__Fotos {
 			width: 130px;
 			height: 130px;
+		}
+		&__contenedorTitulo {
+			text-align: center;
+			width: 90%;
 		}
 	}
 
