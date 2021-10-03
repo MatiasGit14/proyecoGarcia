@@ -146,6 +146,7 @@ footer {
 	}
 	&__contenedorTitulo {
 		width: 50%;
+		margin-left: 5%;
 	}
 	&__contenedorFormulario {
 		display: flex;
@@ -155,7 +156,7 @@ footer {
 		width: 50%;
 		font-family: "Georama", sans-serif;
 		text-align: center;
-		margin: 5% auto;
+		margin: 5% 5%;
 	}
 }
 
@@ -256,6 +257,7 @@ footer {
 		&__contenedorTitulo {
 			text-align: center;
 			width: 90%;
+			padding-bottom: 25%;
 		}
 	}
 
@@ -289,6 +291,7 @@ footer {
 		&__contenedorTitulo {
 			width: 100%;
 			text-align: center;
+			margin: 0;
 		}
 		&__contenedorFormulario {
 			display: flex;

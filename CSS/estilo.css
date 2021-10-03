@@ -109,7 +109,8 @@ footer {
     font-size: 4rem;
     margin-top: 5%; }
   .contacto__contenedorTitulo {
-    width: 50%; }
+    width: 50%;
+    margin-left: 5%; }
   .contacto__contenedorFormulario {
     display: flex;
     flex-direction: row;
@@ -118,7 +119,7 @@ footer {
     width: 50%;
     font-family: "Georama", sans-serif;
     text-align: center;
-    margin: 5% auto; }
+    margin: 5% 5%; }
 
 /*Galeria*/
 .galeria {
@@ -196,7 +197,8 @@ footer {
       height: 130px; }
     .galeria__contenedorTitulo {
       text-align: center;
-      width: 90%; }
+      width: 90%;
+      padding-bottom: 25%; }
   .productosQuery {
     display: flex;
     flex-direction: column;
@@ -218,7 +220,8 @@ footer {
     display: block; }
     .contacto__contenedorTitulo {
       width: 100%;
-      text-align: center; }
+      text-align: center;
+      margin: 0; }
     .contacto__contenedorFormulario {
       display: flex;
       flex-direction: row;
