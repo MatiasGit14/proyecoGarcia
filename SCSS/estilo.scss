@@ -7,29 +7,30 @@
 	@if $seccion == "home" {
 		color: rgb(68, 66, 66);
 		font-family: "Georama", sans-serif;
-		font-size: 50px;
+		font-size: 4rem;
 		margin-top: 5%;
 	}
 	@if $seccion == "contacto" {
 		color: rgb(68, 66, 66);
 		font-family: "Georama", sans-serif;
-		font-size: 50px;
+		font-size: 4rem;
 		margin-top: 5%;
 	}
 	@if $seccion == "productos" {
 		color: rgb(68, 66, 66);
 		text-align: center;
+		font-size: 4rem;
 	}
 	@if $seccion == "nosotros" {
 		color: rgb(68, 66, 66);
 		font-family: "Georama", sans-serif;
-		font-size: 50px;
+		font-size: 4rem;
 		margin-top: 5%;
 	}
 	@if $seccion == "galeria" {
 		color: rgb(68, 66, 66);
 		font-family: "Georama", sans-serif;
-		font-size: 50px;
+		font-size: 4rem;
 	}
 }
 /*Layout*/
@@ -66,7 +67,7 @@ main {
 	}
 	&__contenido {
 		font-family: "Georama", sans-serif;
-		margin-top: 5px;
+		margin-right: 5%;
 	}
 	&__titulosParrafos {
 		@include titulos("home");
@@ -99,7 +100,7 @@ aside {
 	}
 	&__contenido {
 		font-family: "Georama", sans-serif;
-		margin-top: 5px;
+		margin-right: 5%;
 	}
 	&__contenedorFotoNosotros {
 		width: 50%;
@@ -145,7 +146,6 @@ footer {
 	}
 	&__contenedorTitulo {
 		width: 50%;
-		margin-left: 5%;
 	}
 	&__contenedorFormulario {
 		display: flex;
@@ -168,7 +168,10 @@ footer {
 
 	&__contenedorTitulo {
 		grid-area: titulo;
-		@include titulos(galeria);
+		&__titulo {
+			@include titulos("galeria");
+		}
+
 		width: 100%;
 		margin: 2% 5%;
 	}
@@ -271,6 +274,7 @@ footer {
 		display: block;
 		margin: auto;
 		width: 75%;
+		margin-bottom: 5%;
 		&__foto {
 			width: 100%;
 		}
