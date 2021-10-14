@@ -42,9 +42,6 @@ main {
 aside {
   width: 50%; }
 
-#carro {
-  width: 50%; }
-
 .carousel.slide,
 .carousel-inner {
   height: 98%; }
@@ -157,7 +154,7 @@ footer {
       width: 180px;
       height: 180px; }
     .galeria__contenedorGaleria__Fotos:hover {
-      transform: scale(2); }
+      transform: scale(1.2); }
 
 /*Productos*/
 .productosQuery {
@@ -184,17 +181,17 @@ footer {
     height: max-content; }
   aside {
     width: 100%; }
-  #carro {
-    width: 100%; }
   .layout {
     grid-template-rows: auto; }
   .galeria {
     grid-template-columns: 100%;
-    grid-template-rows: 20% 40% 40%;
+    grid-template-rows: 40% 30% 30%;
     grid-template-areas: "titulo" "video" "fotos"; }
     .galeria__contenedorGaleria__Fotos {
-      width: 130px;
-      height: 130px; }
+      width: 90px;
+      height: 90px; }
+      .galeria__contenedorGaleria__Fotos__Fotos:hover {
+        transform: none; }
     .galeria__contenedorTitulo {
       text-align: center;
       width: 90%;
@@ -227,7 +224,7 @@ footer {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      width: 100%;
+      width: 85%;
       font-family: "Georama", sans-serif;
       text-align: center; } }
 
@@ -243,6 +240,8 @@ footer {
     .galeria__contenedorGaleria__Fotos {
       width: 130px;
       height: 130px; }
+    .galeria__contenedorGaleria__Fotos:hover {
+      transform: none; }
   .productosQuery {
     display: flex;
     flex-direction: column;
@@ -278,6 +277,8 @@ footer {
 
 /*A partir de 768 px Tablet Grande*/
 @media only screen and (min-width: 768px) {
+  .galeria__contenedorTitulo {
+    width: 85%; }
   .galeria__contenedorGaleria {
     grid-area: fotos;
     display: grid;
@@ -287,5 +288,26 @@ footer {
     justify-items: center;
     align-items: center; }
     .galeria__contenedorGaleria__Fotos {
-      width: 170px;
-      height: 170px; } }
+      width: 100px;
+      height: 100px; }
+    .galeria__contenedorGaleria__Fotos:hover {
+      transform: scale(1.2); }
+  .carro {
+    align-self: center; } }
+
+@media only screen and (min-width: 1024px) {
+  .galeria__contenedorTitulo {
+    width: 85%; }
+  .galeria__contenedorGaleria {
+    grid-area: fotos;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "fotoUno fotoDos fotoTres" "fotoCuatro fotoCinco fotoSeis";
+    justify-items: center;
+    align-items: center; }
+    .galeria__contenedorGaleria__Fotos {
+      width: 130px;
+      height: 130px; }
+    .galeria__contenedorGaleria__Fotos:hover {
+      transform: scale(1.2); } }
